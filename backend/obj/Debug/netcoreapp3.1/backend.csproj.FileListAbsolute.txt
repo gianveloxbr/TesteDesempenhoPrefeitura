@@ -22,3 +22,7 @@ c:\dev\GitHub\TesteDesempenhoPrefeitura\backend\obj\Debug\netcoreapp3.1\backend.
 c:\dev\GitHub\TesteDesempenhoPrefeitura\backend\obj\Debug\netcoreapp3.1\backend.csproj.CopyComplete
 c:\dev\GitHub\TesteDesempenhoPrefeitura\backend\obj\Debug\netcoreapp3.1\backend.dll
 c:\dev\GitHub\TesteDesempenhoPrefeitura\backend\obj\Debug\netcoreapp3.1\backend.pdb
+C:\dev\GitHub\TesteDesempenhoPrefeitura\backend\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.JsonPatch.dll
+C:\dev\GitHub\TesteDesempenhoPrefeitura\backend\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\dev\GitHub\TesteDesempenhoPrefeitura\backend\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\dev\GitHub\TesteDesempenhoPrefeitura\backend\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll

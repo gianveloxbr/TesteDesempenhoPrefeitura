@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\dev\\GitHub\\TesteDesempenhoPrefeitura\\backend\\backend.csproj": {}
+    "C:\\dev\\GitHub\\TesteDesempenhoPrefeitura\\backend\\backend.csproj": {}
   },
   "projects": {
-    "c:\\dev\\GitHub\\TesteDesempenhoPrefeitura\\backend\\backend.csproj": {
+    "C:\\dev\\GitHub\\TesteDesempenhoPrefeitura\\backend\\backend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\dev\\GitHub\\TesteDesempenhoPrefeitura\\backend\\backend.csproj",
+        "projectUniqueName": "C:\\dev\\GitHub\\TesteDesempenhoPrefeitura\\backend\\backend.csproj",
         "projectName": "backend",
-        "projectPath": "c:\\dev\\GitHub\\TesteDesempenhoPrefeitura\\backend\\backend.csproj",
+        "projectPath": "C:\\dev\\GitHub\\TesteDesempenhoPrefeitura\\backend\\backend.csproj",
         "packagesPath": "C:\\Users\\gianv\\.nuget\\packages\\",
-        "outputPath": "c:\\dev\\GitHub\\TesteDesempenhoPrefeitura\\backend\\obj\\",
+        "outputPath": "C:\\dev\\GitHub\\TesteDesempenhoPrefeitura\\backend\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -41,6 +41,10 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
+            "Microsoft.AspNetCore.Mvc.NewtonsoftJson": {
+              "target": "Package",
+              "version": "[3.1.0, )"
+            },
             "MongoDB.Driver": {
               "target": "Package",
               "version": "[2.9.3, )"

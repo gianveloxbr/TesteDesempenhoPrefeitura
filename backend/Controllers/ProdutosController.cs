@@ -38,7 +38,7 @@ namespace backend.Controllers
         {
             _produtoService.Create(produto);
 
-            return CreatedAtRoute("GetBook", new {id = produto.id.ToString()},produto);
+            return CreatedAtRoute("GetProduto", new {id = produto.id.ToString()},produto);
         }
 
         [HttpPut("{id:length(24)}")]
@@ -46,12 +46,12 @@ namespace backend.Controllers
         {
             var produto = _produtoService.Get(id);
 
-            if(produto == null)
+            if (produto == null)
             {
                 return NotFound();
             }
 
-            _produtoService.Update(id,prod);
+            _produtoService.Update(id, prod);
 
             return NoContent();
         }
