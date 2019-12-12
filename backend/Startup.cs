@@ -38,6 +38,8 @@ namespace backend
 
             services.AddControllers()
                     .AddNewtonsoftJson(options => options.UseMemberCasing());
+
+            services.AddCors();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -51,7 +53,12 @@ namespace backend
             app.UseHttpsRedirection();
 
             app.UseRouting();
-
+		
+	        app.UseCors(option => {                
+                option.AllowAnyOrigin();
+                option.AllowAnyMethod();
+		option.AllowAnyHeader();
+            });
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
