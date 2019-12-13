@@ -11,7 +11,7 @@ Implementado um CRUD de produtos para o teste de desempenho da Prefeitura de Pat
 Ex.: mongod -dbpath C:\mongo\data
  - Backend: Navegue até a pasta backend do repositório e execute o seguinte comando:
 dotnet run
- -  Frontend: Navegue até a pasta frontend do repositório e execute os seguintes comandos: npm i e logo apos npm run dev. Depois basta acessar no navegador o endereço: https://localhost:3000
+ -  Frontend: Navegue até a pasta frontend do repositório e execute os seguintes comandos: npm i e logo apos npm run dev. Depois basta acessar no navegador o endereço: http://localhost:3000
  - Portas em que os projetos devem rodar: Mongo: 27017, Dotnet: 5001 e Nuxt: 3000
 ## Qual era o objetivo?
 Construir um projeto simples capaz de operar um CRUD com os seguintes atributos para
