@@ -8,12 +8,8 @@
           <td>{{ props.item.Descricao }}</td>
           <td>{{ props.item.Preco }}</td>
           <td>{{ props.item.Categoria }}</td>
-          <td><v-btn text small color="primary">Primary</v-btn></td>
-          <td>
-            <v-btn>
-              Remover
-            </v-btn>
-          </td>
+          <v-btn color="primary" :to="`/update/${props.item.id}`">Atualizar</v-btn>
+          <v-btn color="error" @click="deleteProduto(props.item.id)">Remover</v-btn>
         </tr>
       </template>
     </v-data-table>
@@ -54,6 +50,22 @@ export default {
           this.listData = res.data
         })
         .catch((err) => {
+          console.log(err)
+        })
+    },
+    deleteProduto(id) {
+      const URL = `https://localhost:5001/api/produtos/${id}`
+      this.$axios({
+        method: 'delete',
+        url: URL,
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      })
+        .then(_ => {
+          this.listarProdutos()
+        })
+        .catch(err => {
           console.log(err)
         })
     }
