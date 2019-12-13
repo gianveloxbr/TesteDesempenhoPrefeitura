@@ -44,7 +44,7 @@ export default {
         data
       })
         .then((_) => {
-          this.$router.push('/app')
+          this.$router.push('/')
         })
         .catch((err) => {
           console.log(err)

@@ -1,19 +1,74 @@
 <template>
-  <v-layout column justify-center align-center>
-    <v-data-table :headers="headers" :items="listData" class="elevation-0">
-      <template slot="items" slot-scope="props">
-        <tr>
-          <td>{{ props.item.id }}</td>
-          <td>{{ props.item.Nome }}</td>
-          <td>{{ props.item.Descricao }}</td>
-          <td>{{ props.item.Preco }}</td>
-          <td>{{ props.item.Categoria }}</td>
-          <v-btn color="primary" :to="`/update/${props.item.id}`">Atualizar</v-btn>
-          <v-btn color="error" @click="deleteProduto(props.item.id)">Remover</v-btn>
-        </tr>
-      </template>
-    </v-data-table>
-  </v-layout>
+  <v-app class="flagStyle">
+    <v-container
+      fill-height
+      fluid
+      grid-list-xl
+    >
+      <v-layout wrap>
+        <v-flex
+          xl12
+          lg12
+          md12
+          sm12
+          xs12
+        >
+          <material-card>
+            <v-btn
+              color="success"
+              to="/create"
+            >
+              Novo Produto
+            </v-btn>
+            <v-spacer />
+            <v-data-table
+              :headers="headers"
+              :items="listData"
+              :footer-props="{
+                showFirstLastPage: true,
+                itemsPerPageText: 'Quantidade por Página'
+              }"
+              dark
+
+              style="background-color: #463B4B; color: white"
+              sort-by="nome"
+              class="elevation-1"
+            >
+              <template>
+                <div>
+                  <v-icon color="warning">mdi-crown</v-icon>
+                </div>
+              </template>
+              <template v-slot:item.update="{ item }">
+                <v-btn
+                  color="primary"
+                  :to="`/update/${item.id}`"
+                >
+                  Atualizar
+                </v-btn>
+              </template>
+              <template v-slot:item.delete="{ item }">
+                <v-btn
+                  color="error"
+                  @click="deleteProduto(item.id)"
+                >
+                  Excluir
+                </v-btn>
+              </template>
+              <template v-slot:no-data>
+                  <br>
+                <v-alert
+                  :value="true"
+                  color="error"
+                  icon="mdi-alert"
+                >Nenhum produto cadastrado.</v-alert>
+              </template>
+            </v-data-table>
+          </material-card>
+        </v-flex>
+      </v-layout>
+    </v-container>
+  </v-app>
 </template>
 <script>
 export default {
@@ -28,8 +83,8 @@ export default {
         { text: 'Descrição', value: 'Descricao' },
         { text: 'Preço', value: 'Preco' },
         { text: 'Categoria', value: 'Categoria' },
-        { text: 'Atualizar', value: 'atualizar' },
-        { text: 'Remover', value: 'remover' }
+        { text: 'Atualizar', value: 'update' },
+        { text: 'Excluir', value: 'delete'}
       ]
     }
   },
@@ -62,10 +117,10 @@ export default {
           'Content-Type': 'application/json'
         }
       })
-        .then(_ => {
+        .then((_) => {
           this.listarProdutos()
         })
-        .catch(err => {
+        .catch((err) => {
           console.log(err)
         })
     }

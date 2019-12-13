@@ -45,20 +45,21 @@ export default {
           'Content-Type': 'application/json'
         }
       })
-        .then(res => {
-          const { Nome,Descricao,Preco,Categoria } = res.data
+        .then((res) => {
+          const { Id, Nome, Descricao, Preco, Categoria } = res.data
+          this.Id = id
           this.Nome = Nome
           this.Descricao = Descricao
           this.Preco = Preco
           this.Categoria = Categoria
         })
-        .catch(err => {
+        .catch((err) => {
           console.log(err)
         })
     },
     updateProduto(id) {
-      const { Nome, Descricao, Preco, Categoria } = this
-      const data = { Nome,Descricao,Preco,Categoria }
+      const { Id, Nome, Descricao, Preco, Categoria } = this
+      const data = { Id, Nome, Descricao, Preco, Categoria }
       const URL = `https://localhost:5001/api/produtos/${id}`
       this.$axios({
         method: 'put',
@@ -68,10 +69,10 @@ export default {
         },
         data
       })
-        .then(_ => {
+        .then((_) => {
           this.$router.push('/')
         })
-        .catch(err => {
+        .catch((err) => {
           console.log(err)
         })
     }

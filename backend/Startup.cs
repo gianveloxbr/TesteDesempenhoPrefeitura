@@ -49,8 +49,11 @@ namespace backend
             {
                 app.UseDeveloperExceptionPage();
             }
+            else{
+                app.UseHsts();
+            }
 
-            app.UseHttpsRedirection();
+            app.UseHttpsRedirection(); 
 
             app.UseRouting();
 		
