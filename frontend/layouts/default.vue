@@ -1,7 +1,7 @@
 <template>
-  <v-app dark>
+  <v-app style="background:rgba(0,0,0,0);">
     <v-app-bar :clipped-left="clipped" fixed app>
-      <v-toolbar-title v-text="title" />
+      <v-btn text to="/"><v-toolbar-title v-text="title" /></v-btn>
     </v-app-bar>
     <v-content>
       <v-container>
@@ -53,3 +53,9 @@ export default {
   }
 }
 </script>
+<style>
+  body{
+  background-image:url('../assets/bkg.png');
+  background-repeat: repeat;
+  }
+</style>

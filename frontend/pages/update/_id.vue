@@ -14,6 +14,9 @@
             <v-btn type="submit">
               Atualizar Produto
             </v-btn>
+            <v-btn to="/">
+              Voltar
+            </v-btn>
           </form>
         </v-card-text>
       </v-card>

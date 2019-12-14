@@ -1,5 +1,5 @@
 <template>
-  <v-app class="flagStyle">
+  <v-app style="background: rgba(0,0,0,0)">
     <v-container
       fill-height
       fluid
@@ -14,6 +14,7 @@
           xs12
         >
           <material-card>
+            <h1 class="text-xl text-center" style="color:white;">Bem-vindo(a) ao gSHOP!</h1>
              <v-dialog v-model="dialog" persistent max-width="600px">
       <template v-slot:activator="{ on }">
         <v-btn color="primary" dark v-on="on" @click.stop="dialog = true">Novo Produto</v-btn>
@@ -48,6 +49,7 @@
       </v-card>
     </v-dialog>
             <v-spacer />
+            <h1 class="text-xl text-center" style="color:white;">Lista de Produtos</h1>
             <v-data-table
               :headers="headers"
               :items="listData"
