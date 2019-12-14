@@ -8,20 +8,8 @@
         <nuxt />
       </v-container>
     </v-content>
-    <v-navigation-drawer v-model="rightDrawer" :right="right" temporary fixed>
-      <v-list>
-        <v-list-item @click.native="right = !right">
-          <v-list-item-action>
-            <v-icon light>
-              mdi-repeat
-            </v-icon>
-          </v-list-item-action>
-          <v-list-item-title>Switch drawer (click me)</v-list-item-title>
-        </v-list-item>
-      </v-list>
-    </v-navigation-drawer>
     <v-footer :fixed="fixed" app>
-      <span>&copy; 2019 Gian Michel</span>
+      <span>&copy; 2019 <a id="linkgit" href="https://github.com/gianveloxbr" target="_blank">Gian Michel</a></span>
     </v-footer>
   </v-app>
 </template>
@@ -55,7 +43,11 @@ export default {
 </script>
 <style>
   body{
-  background-image:url('../assets/bkg.png');
+  background-image:url('../static/bkg.png');
   background-repeat: repeat;
+  }
+  #linkgit{
+    color:white;
+    background-color: transparent;
   }
 </style>

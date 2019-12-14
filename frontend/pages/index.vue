@@ -14,10 +14,10 @@
           xs12
         >
           <material-card>
-            <h1 class="text-xl text-center" style="color:white;">Bem-vindo(a) ao gSHOP!</h1>
+            <h1 class="text-xl text-center" style="color:black;">Bem-vindo(a) ao gSHOP!</h1>
              <v-dialog v-model="dialog" persistent max-width="600px">
       <template v-slot:activator="{ on }">
-        <v-btn color="primary" dark v-on="on" @click.stop="dialog = true">Novo Produto</v-btn>
+        <v-btn color="primary" dark v-on="on" @click.stop="dialog = true">Adicionar Novo Produto</v-btn>
       </template>
       <v-card>
         <v-card-title>
@@ -49,7 +49,7 @@
       </v-card>
     </v-dialog>
             <v-spacer />
-            <h1 class="text-xl text-center" style="color:white;">Lista de Produtos</h1>
+            <h1 class="text-xl text-center" style="color:black;">Lista de Produtos</h1>
             <v-data-table
               :headers="headers"
               :items="listData"
@@ -110,10 +110,7 @@ export default {
       dialog: false,
       dialogDelete: false,
       headers: [
-        {
-          text: 'Nome',
-          value: 'Nome'
-        },
+        { text: 'Nome', value: 'Nome' },
         { text: 'Descrição', value: 'Descricao' },
         { text: 'Preço', value: 'Preco' },
         { text: 'Categoria', value: 'Categoria' },
